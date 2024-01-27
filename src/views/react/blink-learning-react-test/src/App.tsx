@@ -1,18 +1,17 @@
-import { Link } from 'wouter';
+import { Route, Switch } from 'wouter';
 import './App.css';
+import HomePage from './pages/homePage';
 
 function App() {
   // const [count, setCount] = useState(0);
 
   return (
-    <div>
-      <Link href='/test'>
-        <a className='link'>Realizar prueba</a>
-      </Link>
-      <Link href='/test-results'>
-        <a className='link'>Resultados de la prueba</a>
-      </Link>
-    </div>
+    <Switch>
+      <Route path='/' component={HomePage} />
+      {/* <Route path='/test' component={HomePage} />
+      <Route path='/test-results' component={HomePage} /> */}
+      <Route>404, Not Found!</Route>
+    </Switch>
   );
 }
 
