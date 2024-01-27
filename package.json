@@ -19,5 +19,9 @@
   "bugs": {
     "url": "https://github.com/orlandos20/bl-test-private/issues"
   },
-  "homepage": "https://github.com/orlandos20/bl-test-private#readme"
+  "homepage": "https://github.com/orlandos20/bl-test-private#readme",
+  "devDependencies": {
+    "ts-jest": "^29.1.2",
+    "typescript": "^5.3.3"
+  }
 }
