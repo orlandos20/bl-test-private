@@ -1,7 +1,16 @@
 import React, { useState } from 'react';
-import { Question } from '../../../../../../modules/exams/trueFalse/domain/models/TrueFalseExam';
 
-const Field: React.FC<Question> = ({ question }) => {
+type FieldProps = {
+  question: string;
+  correctAnswer?: boolean;
+  userAnswer?: boolean;
+};
+
+const Field: React.FC<FieldProps> = ({
+  question,
+  correctAnswer,
+  userAnswer,
+}) => {
   const [validationMessage, setValidationMessage] = useState<string>();
 
   const onChange = () => {
@@ -18,7 +27,13 @@ const Field: React.FC<Question> = ({ question }) => {
       className={validationMessage ? 'field-required' : ''}
     >
       <legend>{question}</legend>
-      <label htmlFor={`${question}-true`}>
+      <label
+        htmlFor={`${question}-true`}
+        {...(userAnswer && {
+          className:
+            correctAnswer == userAnswer ? 'correct-answer' : 'wrong-answer',
+        })}
+      >
         <input
           type='radio'
           required
@@ -27,11 +42,20 @@ const Field: React.FC<Question> = ({ question }) => {
           value='true'
           onInvalid={onInvalid}
           onChange={onChange}
+          defaultChecked={userAnswer !== undefined && userAnswer}
+          disabled={userAnswer !== undefined}
         />
-        verdadero
+        Verdadero
       </label>
 
-      <label htmlFor={`${question}-false`}>
+      <label
+        htmlFor={`${question}-false`}
+        {...(userAnswer !== undefined &&
+          !userAnswer && {
+            className:
+              correctAnswer === userAnswer ? 'correct-answer' : 'wrong-answer',
+          })}
+      >
         <input
           type='radio'
           required
@@ -40,8 +64,10 @@ const Field: React.FC<Question> = ({ question }) => {
           value='false'
           onInvalid={onInvalid}
           onChange={onChange}
+          defaultChecked={userAnswer !== undefined && !userAnswer}
+          disabled={userAnswer !== undefined}
         />
-        falso
+        Falso
       </label>
       <br />
     </fieldset>

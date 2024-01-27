@@ -12,6 +12,13 @@ export type TrueFalseExam = {
   };
 };
 
-export interface UserResponse extends Partial<Question> {
+export interface UserResponse {
+  question: string;
+  userAnswer: boolean;
+}
+
+export interface ExamResults {
+  question: string;
+  correctAnswer: boolean;
   userAnswer: boolean;
 }

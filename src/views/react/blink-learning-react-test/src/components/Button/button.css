@@ -8,6 +8,7 @@
   display: inline-block;
   transition: all 0.2s;
   position: relative;
+  margin-inline: 20px;
 }
 
 .button:enabled:hover {

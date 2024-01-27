@@ -1,28 +1,20 @@
 import { useState, useEffect, useContext, useRef } from 'react';
 import { TrueFalseExamContext } from '../contexts/true-false-exam';
-import { TrueFalseExam } from '../../../../../modules/exams/trueFalse/domain/models/TrueFalseExam';
 import Button from '../components/Button';
 import Field from '../components/form/field';
 import { useLocation } from 'wouter';
 
 const TestPage = () => {
-  const { getLocalExam, submitExam } = useContext(TrueFalseExamContext);
-  const [examData, setExamData] = useState<TrueFalseExam>();
+  const { examData, getLocalExam, submitExam } =
+    useContext(TrueFalseExamContext);
   const [readyForSubmit, setReadyForSubmit] = useState<boolean>(false);
   const [, navigate] = useLocation();
 
   const formRef = useRef<HTMLFormElement>(null);
 
-  const getExam = async () => {
-    const exam = await getLocalExam();
-    if (exam) {
-      setExamData(exam);
-    }
-  };
-
   useEffect(() => {
     if (!examData) {
-      getExam();
+      getLocalExam();
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
@@ -66,7 +58,7 @@ const TestPage = () => {
         {examData?.topic} | {examData.subject}
       </h2>
       <br />
-      <h3>{examData?.examStructure?.examTitle}</h3>
+      <h3>{examData?.examStructure?.examTitle}:</h3>
       <br />
       <div>
         <form
@@ -76,8 +68,8 @@ const TestPage = () => {
           onChange={formOnChange}
         >
           {examData.examStructure?.questions?.length > 0 &&
-            examData.examStructure?.questions?.map(({ question, answer }) => (
-              <Field key={question} question={question} answer={answer} />
+            examData.examStructure?.questions?.map(({ question }) => (
+              <Field key={question} question={question} />
             ))}
 
           <Button variant='error' type='submit' disabled={!readyForSubmit}>

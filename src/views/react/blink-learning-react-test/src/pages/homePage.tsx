@@ -14,7 +14,7 @@ const HomePage = () => {
         disabled={examIsCompleted}
         onClick={() => navigate('/test')}
       >
-        Realziar prueba
+        Realizar prueba
       </Button>
       <Button
         variant='success'
