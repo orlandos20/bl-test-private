@@ -1,12 +1,9 @@
-import { MouseEventHandler } from 'react';
 import './button.css';
 
-type ButtonProps = {
+interface ButtonProps extends React.HTMLProps<HTMLButtonElement> {
   children: string | React.ReactElement;
   variant: 'success' | 'info' | 'warning' | 'error';
-  disabled?: boolean;
-  onClick?: MouseEventHandler<HTMLButtonElement>;
-};
+}
 
 const Button: React.FC<ButtonProps> = ({
   children,

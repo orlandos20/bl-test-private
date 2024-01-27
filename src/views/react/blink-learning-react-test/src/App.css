@@ -40,3 +40,12 @@
 .read-the-docs {
   color: #888;
 }
+
+.field-required > label > input:invalid {
+  outline: 1px solid red;
+}
+
+.field-required > span {
+  display: block;
+  color: red;
+}
