@@ -44,7 +44,6 @@ const Field: React.FC<Question> = ({ question }) => {
         falso
       </label>
       <br />
-      {validationMessage && <span>Este campo es requerido</span>}
     </fieldset>
   );
 };

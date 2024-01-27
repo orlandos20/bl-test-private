@@ -11,3 +11,7 @@ export type TrueFalseExam = {
     questions: Array<Question>;
   };
 };
+
+export interface UserResponse extends Partial<Question> {
+  userAnswer: boolean;
+}
