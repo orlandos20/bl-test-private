@@ -1,0 +1,5 @@
+/node_modules
+/lib
+*.map
+^.lock
+*.js.map
