@@ -1,13 +1,14 @@
 import { TrueFalseExam } from '../../domain/models/true-false-exam/TrueFalseExam';
 import { TrueFalseExamRepository } from './TrueFalseExamRepository';
+import { trueFalseExam } from '../../mocks/true-false-exam';
 
 const getExamByLocalSource = (): TrueFalseExam => {
-  return {} as TrueFalseExam;
+  return trueFalseExam;
 };
 
-const getExamByExternalSource = (): Promise<TrueFalseExam> => {
+const getExamByExternalSource = async (): Promise<TrueFalseExam> => {
   return new Promise<TrueFalseExam>((resolve, reject) => {
-    resolve({} as TrueFalseExam);
+    resolve(trueFalseExam as TrueFalseExam);
   });
 };
 
