@@ -12,7 +12,7 @@ const getExamByExternalSource = async (): Promise<TrueFalseExam> => {
   });
 };
 
-export function TrueFalseExamRepository(): TrueFalseExamRepository {
+export function CreateTrueFalseExamRepository(): TrueFalseExamRepository {
   return {
     getExamByLocalSource,
     getExamByExternalSource,
