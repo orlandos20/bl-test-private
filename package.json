@@ -1,0 +1,23 @@
+{
+  "name": "blink-learning-technical-test",
+  "version": "1.0.0",
+  "description": "technical test for frontend position at blink learning",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/orlandos20/bl-test-private.git"
+  },
+  "keywords": [
+    "blinkLearning",
+    "react"
+  ],
+  "author": "orlando.jimenez.dev@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/orlandos20/bl-test-private/issues"
+  },
+  "homepage": "https://github.com/orlandos20/bl-test-private#readme"
+}
