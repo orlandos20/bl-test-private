@@ -1,14 +1,21 @@
-import { Link } from 'wouter';
+import { useLocation } from 'wouter';
+import Button from '../components/Button';
 
 const HomePage = () => {
+  const [, navigate] = useLocation();
+
   return (
     <div>
-      <Link href='/test'>
-        <a className='link'>Realizar prueba</a>
-      </Link>
-      <Link href='/test-results'>
-        <a className='link'>Resultados de la prueba</a>
-      </Link>
+      <Button variant='success' onClick={() => navigate('/test')}>
+        Realziar prueba
+      </Button>
+      <Button
+        variant='success'
+        disabled
+        onClick={() => navigate('/test-results')}
+      >
+        Resultados test
+      </Button>
     </div>
   );
 };
