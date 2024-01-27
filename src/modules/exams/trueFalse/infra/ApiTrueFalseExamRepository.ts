@@ -1,6 +1,6 @@
-import { TrueFalseExam } from '../../domain/models/true-false-exam/TrueFalseExam';
+import { TrueFalseExam } from '../domain/models/TrueFalseExam';
 import { TrueFalseExamRepository } from './TrueFalseExamRepository';
-import { trueFalseExam } from '../../mocks/true-false-exam';
+import { trueFalseExam } from '../mocks';
 
 const getExamByLocalSource = (): TrueFalseExam => {
   return trueFalseExam;

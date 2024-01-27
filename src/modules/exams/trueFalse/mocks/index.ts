@@ -1,4 +1,4 @@
-import { TrueFalseExam } from '../../domain/models/true-false-exam/TrueFalseExam';
+import { TrueFalseExam } from '../domain/models/TrueFalseExam';
 
 export const trueFalseExam: TrueFalseExam = {
   topic: 'Estructuras III',
