@@ -1,7 +1,7 @@
 import { useContext } from 'react';
 import { useLocation } from 'wouter';
-import Button from '../components/Button';
-import { TrueFalseExamContext } from '../contexts/true-false-exam';
+import Button from '../../components/Button';
+import { TrueFalseExamContext } from '../../contexts/true-false-exam';
 
 const HomePage = () => {
   const [, navigate] = useLocation();

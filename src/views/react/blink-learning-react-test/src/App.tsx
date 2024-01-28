@@ -1,6 +1,6 @@
 import { Route, Switch } from 'wouter';
 import './App.css';
-import HomePage from './pages/homePage';
+import HomePage from './pages/home/homePage';
 import TestPage from './pages/testPage';
 import TestResultsPage from './pages/testResultsPage';
 
