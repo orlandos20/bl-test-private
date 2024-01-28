@@ -1,28 +1,28 @@
 {
-  "name": "blink-learning-technical-test",
-  "version": "1.0.0",
-  "description": "technical test for frontend position at blink learning",
-  "main": "index.js",
+  "name": "blink-learning-react-test",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
   "scripts": {
-    "test": "test"
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/orlandos20/bl-test-private.git"
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   },
-  "keywords": [
-    "blinkLearning",
-    "react"
-  ],
-  "author": "orlando.jimenez.dev@gmail.com",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/orlandos20/bl-test-private/issues"
-  },
-  "homepage": "https://github.com/orlandos20/bl-test-private#readme",
   "devDependencies": {
-    "@types/react": "^18.2.48",
-    "ts-jest": "^29.1.2",
-    "typescript": "^5.3.3"
+    "@types/react": "^18.2.43",
+    "@types/react-dom": "^18.2.17",
+    "@typescript-eslint/eslint-plugin": "^6.14.0",
+    "@typescript-eslint/parser": "^6.14.0",
+    "@vitejs/plugin-react": "^4.2.1",
+    "eslint": "^8.55.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.5",
+    "typescript": "^5.2.2",
+    "vite": "^5.0.8"
   }
 }
