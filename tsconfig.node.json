@@ -4,7 +4,14 @@
     "skipLibCheck": true,
     "module": "ESNext",
     "moduleResolution": "bundler",
-    "allowSyntheticDefaultImports": true
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "types": [
+      "jest",
+      "node",
+      "@testing-library/react",
+      "@testing-library/jest-dom"
+    ]
   },
   "include": ["vite.config.ts"]
 }

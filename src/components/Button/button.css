@@ -1,0 +1,53 @@
+.button {
+  text-transform: uppercase;
+  text-decoration: none;
+  color: rgb(27, 27, 27);
+  padding: 10px 30px;
+  border: 1px solid;
+  border-radius: 1000px;
+  display: inline-block;
+  transition: all 0.2s;
+  position: relative;
+  margin-inline: 20px;
+}
+
+.button:enabled:hover {
+  transform: translateY(-5px);
+  border-color: transparent;
+}
+
+.button:enabled:active {
+  transform: translateY(-3px);
+}
+
+.button::after {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: 100px;
+  top: 0;
+  left: 0;
+  position: absolute;
+  z-index: -1;
+  transition: all 0.3s;
+}
+
+.button:disabled,
+.button:disabled:hover {
+  opacity: 0.5;
+  transform: 'none';
+}
+
+.button--variant-success {
+  background-color: #16a34a;
+}
+.button--variant-info {
+  background-color: #4f46e5;
+}
+.button--variant-warning {
+  background-color: #f97316;
+}
+.button--variant-error {
+  background-color: #dc2626;
+}

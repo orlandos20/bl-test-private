@@ -1,6 +1,19 @@
 /** @type {import('ts-jest').JestConfigWithTsJest} */
-module.exports = {
+export default {
   preset: 'ts-jest',
-  testEnvironment: 'node',
-  testMatch: ['**/tests/**/*.ts?(x)', '**/?(*.)+(test).ts?(x)'],
+  testEnvironment: 'jsdom',
+  testMatch: ['**/__test__/**/*.(spect|test).ts?(x)', '**/?(*.)+(test).ts?(x)'],
+  transform: {
+    '^.+\\.[tj]sx?$': [
+      'ts-jest',
+      {
+        tsConfig: './tsconfig.json',
+        useESM: true,
+      },
+    ],
+  },
+  moduleNameMapper: {
+    '\\.(css|sass)$': 'identity-obj-proxy',
+  },
+  setupFilesAfterEnv: ['./setupTests.ts'],
 };
