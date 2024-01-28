@@ -3,13 +3,13 @@ import { useState } from 'react';
 import {
   getExamByLocalSource,
   getExamByLocalExternalSource,
-} from '../../../../../modules/exams/trueFalse/application/getExam';
-import { CreateTrueFalseExamRepository } from '../../../../../modules/exams/trueFalse/infra/ApiTrueFalseExamRepository';
+} from '../../../../../../modules/exams/trueFalse/application/getExam';
+import { CreateTrueFalseExamRepository } from '../../../../../../modules/exams/trueFalse/infra/ApiTrueFalseExamRepository';
 import {
   TrueFalseExam,
   UserResponse,
   ExamResults,
-} from '../../../../../modules/exams/trueFalse/domain/models/TrueFalseExam';
+} from '../../../../../../modules/exams/trueFalse/domain/models/TrueFalseExam';
 
 export const useTrueFalseExam = () => {
   const [examIsCompleted, setExamIsCompleted] = useState<boolean>(false);

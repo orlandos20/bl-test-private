@@ -1,5 +1,5 @@
 import { createContext, Context } from 'react';
-import { useTrueFalseExam } from '../hooks/use-true-false-exam';
+import { useTrueFalseExam } from '../hooks/true-false-exam/use-true-false-exam';
 
 type TrueFalseContextType = ReturnType<typeof useTrueFalseExam>;
 

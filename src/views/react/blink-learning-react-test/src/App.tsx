@@ -5,7 +5,7 @@ import TestPage from './pages/testPage';
 import TestResultsPage from './pages/testResultsPage';
 
 import { TrueFalseExamContext } from './contexts/true-false-exam';
-import { useTrueFalseExam } from './hooks/use-true-false-exam';
+import { useTrueFalseExam } from './hooks/true-false-exam/use-true-false-exam';
 
 function App() {
   return (

@@ -7,7 +7,7 @@ const getExamByLocalSource = (): TrueFalseExam => {
 };
 
 const getExamByExternalSource = async (): Promise<TrueFalseExam> => {
-  return new Promise<TrueFalseExam>((resolve, reject) => {
+  return new Promise<TrueFalseExam>((resolve) => {
     resolve(trueFalseExam as TrueFalseExam);
   });
 };
