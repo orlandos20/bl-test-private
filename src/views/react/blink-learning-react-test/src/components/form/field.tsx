@@ -44,6 +44,7 @@ const Field: React.FC<FieldProps> = ({
           onChange={onChange}
           defaultChecked={userAnswer !== undefined && userAnswer}
           disabled={userAnswer !== undefined}
+          data-testid='trueRadio'
         />
         Verdadero
       </label>
@@ -66,6 +67,7 @@ const Field: React.FC<FieldProps> = ({
           onChange={onChange}
           defaultChecked={userAnswer !== undefined && !userAnswer}
           disabled={userAnswer !== undefined}
+          data-testid='falseRadio'
         />
         Falso
       </label>

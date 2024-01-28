@@ -1,7 +1,7 @@
 import { useState, useEffect, useContext, useRef } from 'react';
-import { TrueFalseExamContext } from '../contexts/true-false-exam';
-import Button from '../components/Button';
-import Field from '../components/form/field';
+import { TrueFalseExamContext } from '../../contexts/true-false-exam';
+import Button from '../../components/Button';
+import Field from '../../components/form/field';
 import { useLocation } from 'wouter';
 
 const TestPage = () => {
