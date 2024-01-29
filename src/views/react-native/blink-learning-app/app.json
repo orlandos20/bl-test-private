@@ -1,0 +1,16 @@
+{
+  "expo": {
+    "name": "blink-learning-app",
+    "slug": "blink-learning-app",
+    "version": "1.0.0",
+    "sdkVersion": "50.0.0",
+    "platforms": [
+      "ios",
+      "android",
+      "web"
+    ],
+    "ios": {
+      "bundleIdentifier": "com.orlandojs.blink-learning-app"
+    }
+  }
+}
