@@ -3,8 +3,8 @@ import { userEvent } from '@testing-library/user-event';
 import { useTrueFalseExam } from '../../../hooks/true-false-exam/use-true-false-exam';
 import HomePage from '../homePage';
 
-import { trueFalseExam } from '../../../../../../../modules/exams/trueFalse/mocks';
-import { UserResponse } from '../../../../../../../modules/exams/trueFalse/domain/models/TrueFalseExam';
+import { trueFalseExam } from '../../../../../../modules/exams/trueFalse/mocks';
+import { UserResponse } from '../../../../../../modules/exams/trueFalse/domain/models/TrueFalseExam';
 
 import { TrueFalseExamContext } from '../../../contexts/true-false-exam';
 

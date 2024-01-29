@@ -1,7 +1,7 @@
 import { renderHook, act, RenderHookResult } from '@testing-library/react';
 import { useTrueFalseExam } from '../use-true-false-exam';
-import { trueFalseExam } from '../../../../../../../modules/exams/trueFalse/mocks';
-import { UserResponse } from '../../../../../../../modules/exams/trueFalse/domain/models/TrueFalseExam';
+import { trueFalseExam } from '../../../../../../modules/exams/trueFalse/mocks';
+import { UserResponse } from '../../../../../../modules/exams/trueFalse/domain/models/TrueFalseExam';
 
 const mockResponses = ({
   correctAnswersOnly,
