@@ -1,15 +1,18 @@
+import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
-// import { TrueFalseExamContext } from '../../shared/contexts/true-false-exam';
-// import { useTrueFalseExam } from '../../shared/hooks/true-false-exam/use-true-false-exam';
+import { TrueFalseExamContext } from './src/contexts';
+import { useTrueFalseExam } from './src/hooks';
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text style={styles.text}>
-        Open up App.tsx to start working on your app!
-      </Text>
-    </View>
+    <TrueFalseExamContext.Provider value={useTrueFalseExam()}>
+      <View style={styles.container}>
+        <Text style={styles.text}>
+          Open up App.tsx to start working on your app!
+        </Text>
+      </View>
+    </TrueFalseExamContext.Provider>
   );
 }
 
